@@ -1,0 +1,177 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 95px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.parent {
+  text-align: center;
+  border: #dfdede 1px solid;
+  border-radius: 9px;
+  width: 29%;
+  padding: 30px 40px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.username {
+  height: 36px;
+  width: 86%;
+  border: 1px #dfdede solid;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.password {
+  height: 36px;
+  width: 86%;
+  border: 1px #dfdede solid;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.use {
+  margin-bottom: 15px;
+}
+
+.forget {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1c6ff5;
+  text-align: left;
+  margin-left: 6%;
+  font-weight: 600;
+  margin-bottom: -10px;
+}
+
+.text {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  margin-left: 6%;
+  font-weight: 500;
+  font-size: 16px;
+  color: #7a7a7a;
+  margin-bottom: -12px;
+}
+
+.learn {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1c6ff5;
+  text-align: left;
+  margin-left: 6%;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+input:focus {
+  border: 2px blue solid;
+  outline: none;
+}
+
+.sign {
+  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 14px;
+}
+
+.cont {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 18px;
+}
+
+button {
+  background-color: #0b64f3;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 23px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .parent {
+      width: 67%;
+      padding: 20px 30px 17px;
+      margin-top: 30px;
+  }
+
+  .username,
+  .password {
+      height: 27px;
+      width: 93%;
+      border: 1px #dfdede solid;
+      border-radius: 5px;
+      font-size: 16px;
+      padding: 7px;
+      margin-top: 9px;
+  }
+
+  .username {
+      height: 35px;
+  }
+
+  .forget {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1c6ff5;
+      text-align: left;
+      font-weight: 600;
+      margin-bottom: -10px;
+      font-size: 13px;
+      margin-left: -1%;
+  }
+
+  .use {
+      margin-bottom: 0;
+  }
+
+  .text {
+      font-size: 14px;
+      margin-left: -1%;
+  }
+
+  .learn {
+      font-size: 14px;
+      margin-bottom: 5px;
+      margin-left: -1%;
+  }
+
+  button {
+      padding: 8px 20px;
+      font-weight: 600;
+      font-size: 13px;
+  }
+}
+
+
+.welcome-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.welcome-message {
+  font-size: 100px;
+  color: #333;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}

